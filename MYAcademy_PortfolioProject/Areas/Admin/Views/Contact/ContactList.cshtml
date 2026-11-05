@@ -1,0 +1,32 @@
+﻿@model List<Contact>
+
+@{
+    ViewData["Title"] = "Contact List";
+    Layout = "~/Areas/Admin/Views/AdminLayout/index.cshtml";
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Başlık</th>
+            <th>Açıklama</th>
+            <th>Email</th>
+            <th>Location</th>
+            <th>Phone Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ContactId</td>
+                <td>@item.Title</td>
+                <td>@item.Description</td>
+                <td>@item.Email</td>
+                <td>@item.Location</td>
+                <td>@item.PhoneNumber</td>
+            </tr>
+        }
+    </tbody>
+</table>
